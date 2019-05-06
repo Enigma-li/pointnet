@@ -150,9 +150,9 @@ def eval_one_epoch(sess, ops, room_path, out_data_label_filename, out_gt_label_f
                     fout.write(
                         'v %f %f %f %d %d %d\n' % (pts[i, 6], pts[i, 7], pts[i, 8], color[0], color[1], color[2]))
                     fout_gt.write('v %f %f %f %d %d %d\n' % (
-                    pts[i, 6], pts[i, 7], pts[i, 8], color_gt[0], color_gt[1], color_gt[2]))
+                        pts[i, 6], pts[i, 7], pts[i, 8], color_gt[0], color_gt[1], color_gt[2]))
                 fout_data_label.write('%f %f %f %d %d %d %f %d\n' % (
-                pts[i, 6], pts[i, 7], pts[i, 8], pts[i, 3], pts[i, 4], pts[i, 5], pred_val[b, i, pred[i]], pred[i]))
+                    pts[i, 6], pts[i, 7], pts[i, 8], pts[i, 3], pts[i, 4], pts[i, 5], pred_val[b, i, pred[i]], pred[i]))
                 fout_gt_label.write('%d\n' % (l[i]))
         correct = np.sum(pred_label == current_label[start_idx:end_idx, :])
         total_correct += correct

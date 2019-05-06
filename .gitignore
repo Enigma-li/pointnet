@@ -5,6 +5,10 @@ __pycache__/
 .idea/
 log/
 data/
+*.h5
+*/indoor3d_sem_seg_hdf5_data
+*/PartAnnotation/
+*/hdf5_data/
 
 # C extensions
 *.so

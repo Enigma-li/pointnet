@@ -97,12 +97,12 @@ def placeholder_inputs():
     return pointclouds_ph, input_label_ph
 
 
-def output_color_point_cloud(data, seg, out_file):
-    with open(out_file, 'w') as f:
-        l = len(seg)
-        for i in range(l):
-            color = color_map[seg[i]]
-            f.write('v %f %f %f %f %f %f\n' % (data[i][0], data[i][1], data[i][2], color[0], color[1], color[2]))
+# def output_color_point_cloud(data, seg, out_file):
+#     with open(out_file, 'w') as f:
+#         l = len(seg)
+#         for i in range(l):
+#             color = color_map[seg[i]]
+#             f.write('v %f %f %f %f %f %f\n' % (data[i][0], data[i][1], data[i][2], color[0], color[1], color[2]))
 
 
 def load_pts_seg_files(pts_file, seg_file, catid):
